@@ -2,10 +2,8 @@ package sample.cafekiosk.unit;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
-import static org.junit.jupiter.api.Assertions.*;
 
 import java.time.LocalDateTime;
-import org.aspectj.weaver.ast.Or;
 import org.junit.jupiter.api.Test;
 import sample.cafekiosk.unit.beverage.Americano;
 import sample.cafekiosk.unit.beverage.Latte;
@@ -87,7 +85,7 @@ class CafeKioskTest {
         cafeKiosk.add(americano);
         cafeKiosk.add(latte);
 
-        int totalPrice = cafeKiosk.caculrateTotalPrice();
+        int totalPrice = cafeKiosk.calculateTotalPrice();
 
         assertThat(totalPrice).isEqualTo(8500);
     }
